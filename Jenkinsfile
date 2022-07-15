@@ -19,7 +19,6 @@ pipeline {
         }
         stage('Release') {
             withCredentials([string(credentialsId: 'bba8700c-29d5-452d-861c-6cedb2bbc2cd', variable: 'gh_token')]) {
-                #sh 'token="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"'
                 sh 'tag=$(git describe --tags)'
                 sh 'message="$(git for-each-ref refs/tags/$tag --format=\'%(contents)\')"'
                 sh 'name=$(echo "$message" | head -n1)'
