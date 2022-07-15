@@ -30,7 +30,7 @@ pipeline {
                         -X POST \
                         -H "Authorization:token $access_token" \
                         https://api.github.com/repos/Eagle-251/becode-caesar-cipher/releases \
-                        -d '{"tag_name": "$tag", "target_commitish": "main", "name": "$name", "body": "$description", "draft": false, "prerelease": false}' "https://api.github.com/repos/Eagle-251/becode-caesar-cipher/releases)"'
+                        -d '{"tag_name": "$tag", "target_commitish": "main", "name": "$name", "body": "$description", "draft": false, "prerelease": false}' 
                 '''
             }
         }
